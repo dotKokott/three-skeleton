@@ -1,0 +1,30 @@
+{
+  "name": "three-skeleton",
+  "version": "1.0.0",
+  "description": "Skeleton project for rapid three.js prototypes",
+  "main": "index.js",
+  "dependencies": {
+    "browserify": "^13.3.0",
+    "canvas-testbed": "^1.0.4",
+    "glsl-noise": "0.0.0",
+    "glslify": "^6.0.1",
+    "three": "^0.83.0",
+    "three-orbit-controls": "^82.1.0",
+    "webgl-context": "^2.2.0",
+    "wzrd": "^1.5.0"
+  },
+  "devDependencies": {
+    "budo": "^9.4.1"
+  },
+  "browserify": {
+    "transform": [
+      "glslify"
+    ]
+  },
+  "scripts": {
+    "start": "budo index.js --live",
+    "build": "browserify index.js | uglifyjs -cm > bundle.js"
+  },
+  "author": "Christian Kokott",
+  "license": "MIT"
+}
